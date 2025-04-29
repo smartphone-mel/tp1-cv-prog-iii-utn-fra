@@ -1,0 +1,87 @@
+html {
+    font-family: 'Cambria', serif, Arial;
+    color: #333;
+}
+
+.b {
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    margin-top: 32px;
+    margin-left: calc(32px + 16px);
+    display: flex;
+    justify-content: flex-start;
+}
+.iPhoto {
+    align-self: center;
+    width: 128px;
+    height: 128px;
+}
+@media only screen and (max-width : 499.9999px) {
+	.iPhoto {
+        width: calc(64px + 32px);
+        height: calc(64px + 32px);
+    }
+}
+.hHeading {
+    margin-left: 16px;
+    align-self: center;
+}
+
+nav {
+    margin-top: calc(16px + 8px);
+    margin-left: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+@media only screen and (max-width : 799.9999px) {
+    nav {
+        flex-direction: column;
+    }
+}
+nav a[href] {
+    margin: 0 16px 0 0;
+}
+
+main {
+    margin-top: calc(32px + 8px);
+    margin-left: 32px;
+}
+
+section {
+    margin-bottom: calc(32px + 8px);
+}
+section span {
+    color: #444;
+}
+section p {
+    color: #666;
+}
+
+a[href] {
+    text-decoration: none;
+}
+a[href]:link {
+    color: #0096FF;
+}
+a[href]:hover {
+    color: #0087E6;
+}
+a[href]:active {
+    color: #1AA1FF;
+}
+a[href]:visited {
+    color: #0096FF; /* #FF5733 */
+}
+
+footer {
+    text-align: center;
+}
+
+.sFooter { color: #777; }
