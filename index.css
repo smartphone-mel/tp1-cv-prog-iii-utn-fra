@@ -2,9 +2,44 @@ html {
     font-family: 'Cambria', serif, Arial;
     color: #333;
 }
+@media only screen and (min-width : 1152px) {
+    body> :not(hr) {
+        margin: 0 auto;
+        /* lg-bootstrap-size! */
+        max-width: 960px; /* 992px; */
+    }
+}
 
 .b {
     font-weight: bold;
+}
+.button {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0096FF;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: #0087E6;
+}
+.button:active {
+    cursor: pointer;
+    background-color: #1AA1FF;
+}
+.textbox, .drop-down-list {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -22,7 +57,7 @@ header {
     width: 128px;
     height: 128px;
 }
-@media only screen and (max-width : 499.9999px) {
+@media only screen and (max-width : 499.99999px) {
 	.iPhoto {
         width: calc(64px + 32px);
         height: calc(64px + 32px);
@@ -40,7 +75,7 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
 }
-@media only screen and (max-width : 799.9999px) {
+@media only screen and (max-width : 799.99999px) {
     nav {
         flex-direction: column;
     }
@@ -53,8 +88,11 @@ main {
     margin-top: calc(32px + 8px);
     margin-left: 32px;
 }
+main.custom-mb-contact {
+    margin-bottom: 32px;
+}
 
-section {
+section, aside.header {
     margin-bottom: calc(32px + 8px);
 }
 section span {
@@ -62,6 +100,19 @@ section span {
 }
 section p {
     color: #666;
+}
+.sugerencias-section {
+    margin: 0 16px 0 calc(-32px - 8px);
+    padding-top: calc(16px - 8px);
+    padding-left: calc(32px - 8px);
+    padding-bottom: calc(16px - 8px);
+}
+.sugerencias-form {
+    padding: 16px;
+    max-width: 280px;
+    /*border: solid 1px #333;*/
+    border-radius: 6px;
+    background-color: #EAEAEA; /* #DDD */
 }
 
 a[href] {
@@ -78,6 +129,15 @@ a[href]:active {
 }
 a[href]:visited {
     color: #0096FF; /* #FF5733 */
+}
+form input[type="text"], form button {
+    margin-top: 16px;
+}
+/* xs-bootstrap-size! */
+@media only screen and (min-width : 450px) {
+    form input[type="text"] {
+        width: 280px;
+    }
 }
 
 footer {
