@@ -13,6 +13,28 @@ html {
 .b {
     font-weight: bold;
 }
+.color-grey {
+    color: grey;
+}
+.textbox, .drop-down-list {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.drop-down-list {
+    background-color: #FFF;
+}
+form:not(:has(> select.drop-down-list option:checked:not([value=""]))) > .drop-down-list {
+    color: grey;
+}
+form:not(:has(> select.drop-down-list option:checked:not([value=""]))) > .drop-down-list * {
+    color: #333;
+}
 .button {
     display: inline-block;
     padding: 12px 28px;
@@ -31,15 +53,6 @@ html {
 .button:active {
     cursor: pointer;
     background-color: #1AA1FF;
-}
-.textbox, .drop-down-list {
-    width: 100%;
-    padding: 8px 16px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
 
 h2 {
@@ -87,12 +100,16 @@ nav a[href] {
 main {
     margin-top: calc(32px + 8px);
     margin-left: 32px;
+    padding-top: 16px;
 }
 main.custom-mb-contact {
     margin-bottom: 32px;
 }
 
-section, aside.header {
+aside.header {
+    margin-bottom: calc(32px + 4px);
+}
+section {
     margin-bottom: calc(32px + 8px);
 }
 section span {
@@ -133,9 +150,12 @@ a[href]:visited {
 form input[type="text"], form button {
     margin-top: 16px;
 }
+form select {
+    margin-top: 12px;
+}
 /* xs-bootstrap-size! */
 @media only screen and (min-width : 450px) {
-    form input[type="text"] {
+    form input[type="text"], form select {
         width: 280px;
     }
 }
