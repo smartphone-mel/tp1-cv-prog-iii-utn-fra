@@ -1,3 +1,7 @@
+@font-face {
+    font-family: indieFlower;
+    src: url(./assets/font-indie-flower/IndieFlower-Regular.ttf);
+}
 html {
     font-family: 'Cambria', serif, Arial;
     color: #333;
@@ -53,6 +57,10 @@ form:not(:has(> select.drop-down-list option:checked:not([value=""]))) > .drop-d
 .button:active {
     cursor: pointer;
     background-color: #1AA1FF;
+}
+.mockup-font {
+    font-family: indieFlower;
+    font-size: 21px;
 }
 
 h2 {
